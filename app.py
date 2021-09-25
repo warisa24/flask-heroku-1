@@ -25,6 +25,7 @@ data = [
 def hello():
     return "Hello Flask-Herok" 
 
+
 @app.route('/api', methods=['GET'])
 def get_api():
     return jsonify(data)
@@ -33,5 +34,9 @@ def get_api():
 def name():
         return "วริษา โชคเฉลิม เลขที่ 24 ชั้น ม.4/10"
 
+@app.route('hello/<string:name>')
+def Home(name):
+        return render_template('home.html',name_html=name)
+        
 if __name__ == "__main__":
     app.run(debug=False)
