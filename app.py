@@ -47,7 +47,7 @@ def get_api():
 
 @app.route('/name')
 def name():
-        return "วริษา โชคเฉลิม เลขที่ 24 ชั้น ม.4/10"
+        return "<font color=yellow>วริษา โชคเฉลิม เลขที่ 24 ชั้น ม.4/10"
 
 @app.route('hello/<string:name>')
 def Home(name):
